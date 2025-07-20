@@ -11,10 +11,10 @@ Os desafios exploram técnicas essenciais para a construção de layouts e a est
 - Responsividade
 - Git e Github
 
-  ## 🚀 Executando o código
-  ```
-  git clone https://github.com/seu-usuario/nome-do-repositorio.git
-  ```
+## 🚀 Executando o código
+```
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```
 
 
 
