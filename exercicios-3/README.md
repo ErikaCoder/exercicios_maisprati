@@ -1,12 +1,20 @@
-# Listas de Exercícios 02 de JavaScript
-Este repositório oferece uma série de exercícios resolvidos e introdutórios em JavaScript, ideais para desenvolver habilidades em lógica de programação e compreensão dos conceitos essenciais da linguagem. Cada desafio foca em uma temática específica e utiliza a biblioteca prompt-sync para interação com o usuário via terminal.
+# Listas de Exercícios 03 - Desenvolvimento Web Básico
+Este repositório contém os exercícios realizados na disciplina de Desenvolvimento Web Básico, com foco na aplicação de HTML e CSS para a criação de páginas web bem estruturadas e responsivas.
 
-## ⚙️ Pré-requisitos
-- Node.js instalado em sua máquina.
-- Biblioteca prompt-sync instalada para capturar os dados via terminal nos exercícios que exigem entrada. Para isso, execute o seguinte comando no terminal:
-```
-npm install prompt-sync
-```
+Os desafios exploram técnicas essenciais para a construção de layouts e a estilização de sites, com ênfase na criação de interfaces funcionais e visualmente agradáveis. Além disso, há uma breve introdução ao uso de JavaScript para adicionar interatividade, embora o foco principal tenha sido nas tecnologias de marcação e estilo.
+
+## 🤖 Tecnologias Utilizadas
+- HTML
+- CSS
+- Media Queries
+- Flexbox e CSS Grid
+- Responsividade
+- Git e Github
+
+  ## 🚀 Executando o código
+  ```
+  git clone https://github.com/seu-usuario/nome-do-repositorio.git
+  ```
 
 
 
