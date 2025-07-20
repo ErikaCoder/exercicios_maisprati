@@ -1,0 +1,444 @@
+/* --- 1. Reset Básico & Normalização --- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- 2. Variáveis CSS (Cores e Fontes Modernas) --- */
+:root {
+    --primary-color: #8732d1; /* Roxo mais profundo para títulos e acentos */
+    --secondary-color: #ca4de9; /* Roxo escuro para navegação */
+    --accent-color: #e040fb; /* Um magenta vibrante para destaques */
+    --text-color-dark: #333;
+    --text-color-light: #f4f4f4;
+    --background-color-light: #ffffff;
+    --background-color-dark: #2c3e50; /* Cinza escuro para seções específicas */
+    --border-color: #e0e0e0;
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* --- 3. Estilos Gerais --- */
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--background-color-light);
+    color: var(--text-color-dark);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Rolagem suave para âncoras */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 4. Estilo do Cabeçalho (Header) com Particles.js --- */
+header {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 400px; /* Garante altura mínima para as partículas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-medium);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--background-color-dark); /* Fundo para as partículas */
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 0 0 8px var(--accent-color); /* Anel colorido */
+    margin-bottom: 20px;
+    transition: transform 0.4s ease-in-out;
+}
+
+header img:hover {
+    transform: scale(1.08) rotate(3deg); /* Pequeno zoom e rotação */
+}
+
+header p {
+    font-size: 1.3em;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-top: 10px;
+    color: var(--text-color-light);
+}
+
+/* --- 5. Estilo da Navegação (Nav) --- */
+nav {
+    background-color: var(--secondary-color);
+    padding: 18px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Menu fixo ao rolar */
+    top: 0;
+    z-index: 100; /* Garante que fique acima de outros elementos */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--accent-color);
+    transform: translateY(-3px); /* Efeito de levantar */
+}
+
+/* --- 6. Estilo das Seções (Main e Section) --- */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: var(--background-color-light);
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.8em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+}
+
+section p, section ul {
+    font-size: 1.15em;
+    line-height: 1.9;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    text-align: justify;
+    color: var(--text-color-dark);
+}
+
+section ul {
+    list-style: none; /* Remove o estilo padrão da lista */
+    padding-left: 0;
+}
+
+/* Habilidades em Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.skills-grid li {
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--primary-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.skills-grid li:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* --- 7. Estilo dos Projetos (Article dentro de Projetos) --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.project-card {
+    background-color: var(--background-color-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-medium);
+}
+
+.project-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    font-size: 1.05em;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    color: var(--text-color-dark);
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px; /* Botões arredondados */
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* --- 8. Estilo do Aside (Informações Complementares) --- */
+aside {
+    background-color: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.03);
+}
+
+aside h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-links li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links li a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* --- 9. Estilo do Rodapé (Footer) --- */
+footer {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-light);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 0.95em;
+    border-top: 5px solid var(--accent-color); /* Linha de destaque */
+}
+
+/* --- 10. Responsividade com Media Queries --- */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 2.8em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav ul li a {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+
+    section h2 {
+        font-size: 2.4em;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 50px 15px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 25px 15px;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    section p, section ul {
+        font-size: 1em;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    aside {
+        padding: 30px;
+    }
+
+    aside h3 {
+        font-size: 1.6em;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+        padding: 5px 10px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+}

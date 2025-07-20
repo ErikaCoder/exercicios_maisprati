@@ -1,0 +1,42 @@
+header {
+  background-color: #1e1e2f; /* azul escuro */
+  color: #f0f0f5;           /* texto clarinho */
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid #4caf50; /* verde para destacar */
+  border-radius: 8px;
+}
+
+h2 {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.destaque {
+    font-style: italic;
+    background-color: rgba(160, 160, 160, 0.255);
+}
+
+.importante {
+    border-top: 5px solid #000000;
+    padding-top: 10px;
+}
+
+main {
+  background-color: #282c34; /* cinza escuro */
+  color: #d1d1d6;           /* texto suave */
+  margin: 20px;
+  padding: 20px;
+  border: 3px dashed #2196f3; /* azul para contraste */
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #121212; /* preto quase total */
+  color: #a0a0a5;           /* cinza claro */
+  margin: 20px;
+  padding: 15px;
+  border: 3px double #ff5722; /* laranja forte */
+  border-radius: 8px;
+  text-align: center;
+}

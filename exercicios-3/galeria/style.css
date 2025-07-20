@@ -1,0 +1,67 @@
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgb(218, 217, 220);
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.container-galeria {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.galeria-item {
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.galeria-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.galeria-item p {
+  padding: 0.75rem;
+  font-weight: 600;
+  color: #34495e;
+}
+
+p {
+  text-align: center;
+}
+
+/* Grid responsivo */
+@media (max-width: 800px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
