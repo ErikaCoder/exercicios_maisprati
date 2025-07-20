@@ -1,4 +1,4 @@
-# Exercícios - Desenvolvedor Fullstack Júnior +PRATI
+# Exercícios - Desenvolvedor Fullstack Júnior +PRATI e Codifica Edu
 Este repositório contém todos os exercícios realizados durante o curso de Desenvolvedor Fullstack Júnior da +PRATI e Codifica Edu. Cada exercício foi desenvolvido com o objetivo de consolidar o aprendizado e adquirir experiência em programação e no desenvolvimento de aplicações web completas.
 
 
